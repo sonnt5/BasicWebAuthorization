@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+
+
+<urls>
+    <!-- Logic -->
+    <url>/logout</url>
+    <url>/home/feature</url>
+    <url>/order/create</url>
+    <url>/order/history</url>
+    <url>/order/detail</url>
+    <url>/order/list</url>
+    <url>/order/review</url>
+   
+    <url>/resource/create</url>
+    <url>/resource/list</url>
+    <url>/resource/detail</url>
+    <url>/resource/edit</url>
+    <url>/resource/file</url>
+    
+    <url>/product/create</url>
+    <url>/product/update</url>
+    <url>/product/manage</url>
+    
+    <url>/feedback/list</url>
+    <url>/feedback/detail</url>
+</urls>
+
