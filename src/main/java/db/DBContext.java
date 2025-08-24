@@ -75,7 +75,8 @@ public abstract class DBContext<T extends Entity, K extends KeyAttribute> {
                 } else if (param instanceof java.sql.Timestamp) {
                     stm.setTimestamp(i + 1, (java.sql.Timestamp) param);
                 } else if (param instanceof java.util.Date) {
-                    stm.setTimestamp(i + 1, (java.sql.Timestamp) param);
+                    java.util.Date utilDate = (java.util.Date) param;
+                    stm.setTimestamp(i + 1, new java.sql.Timestamp(utilDate.getTime()));
                 } else {
                     throw new SQLException("Unsupported parameter type: " + param.getClass().getName());
                 }
