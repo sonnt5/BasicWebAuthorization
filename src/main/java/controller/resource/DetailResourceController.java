@@ -7,7 +7,6 @@ package controller.resource;
 
 import db.ResourceDBContext;
 import java.io.IOException;
-import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -20,7 +19,7 @@ import util.base.CustomException;
  *
  * @author sonng
  */
-public class DetailResouceController extends HttpServlet {
+public class DetailResourceController extends HttpServlet {
    
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -37,7 +36,7 @@ public class DetailResouceController extends HttpServlet {
         key.setId(resourceid);
         Resource resource = db.get(key);
         if(resource ==null)
-            throw new CustomException("Resouce does not exist!");
+            throw new CustomException("Resource does not exist!");
         
         
         request.setAttribute("resource", resource);
