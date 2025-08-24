@@ -88,16 +88,20 @@ public class EditResourceController extends HttpServlet {
         resource.setUpdater(user);
         
         String[] raw_uid_views = request.getParameterValues("uid_view");
-        ArrayList<String> uid_views = new ArrayList<>();
-        Arrays.asList(raw_uid_views).forEach(item->uid_views.add(item));
+        List<String> uid_views = new ArrayList<>();
+        if (raw_uid_views != null) {
+            uid_views.addAll(Arrays.asList(raw_uid_views));
+        }
         uid_views.add(user.getKey().getId()+"");
         if(!uid_views.contains(resource_fromdb.getCreator().getKey().getId()+""))
             uid_views.add(resource_fromdb.getCreator().getKey().getId()+"");
-        
-        
+
+
         String[] raw_uid_edits = request.getParameterValues("uid_edit");
         List<String> uid_edits = new ArrayList<>();
-        Arrays.asList(raw_uid_edits).forEach(item->uid_edits.add(item));
+        if (raw_uid_edits != null) {
+            uid_edits.addAll(Arrays.asList(raw_uid_edits));
+        }
         uid_edits.add(user.getKey().getId()+"");
         if(!uid_edits.contains(resource_fromdb.getCreator().getKey().getId()+""))
             uid_edits.add(resource_fromdb.getCreator().getKey().getId()+"");
