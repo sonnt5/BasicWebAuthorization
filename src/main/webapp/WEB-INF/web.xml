@@ -90,8 +90,8 @@
         <servlet-class>controller.resource.CreateResourceController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>DetailResouceController</servlet-name>
-        <servlet-class>controller.resource.DetailResouceController</servlet-class>
+        <servlet-name>DetailResourceController</servlet-name>
+        <servlet-class>controller.resource.DetailResourceController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ListResourceController</servlet-name>
@@ -186,7 +186,7 @@
         <url-pattern>/resource/create</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>DetailResouceController</servlet-name>
+        <servlet-name>DetailResourceController</servlet-name>
         <url-pattern>/resource/detail</url-pattern>
     </servlet-mapping>
     <servlet-mapping>

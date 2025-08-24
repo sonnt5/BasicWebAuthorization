@@ -49,7 +49,7 @@ public class EditResourceController extends HttpServlet {
         key.setId(resourceid);
         Resource resource = db.get(key);
         if(resource ==null)
-            throw new CustomException("Resouce does not exist!");
+            throw new CustomException("Resource does not exist!");
         request.setAttribute("resource", resource);
         
         UserDBContext udb = new UserDBContext();
@@ -76,7 +76,7 @@ public class EditResourceController extends HttpServlet {
         key_fromdb.setId(id);
         Resource resource_fromdb = db.get(key_fromdb);
         if(resource_fromdb ==null)
-            throw new CustomException("Resouce does not exist!");
+            throw new CustomException("Resource does not exist!");
         
         String name = request.getParameter("name");
         Resource resource = new Resource();

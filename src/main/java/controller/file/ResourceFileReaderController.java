@@ -43,7 +43,7 @@ public class ResourceFileReaderController extends FileReaderController {
         key.setId(resourceid);
         Resource resource = db.get(key);
         if(resource ==null)
-            throw new CustomException("Resouce does not exist!");
+            throw new CustomException("Resource does not exist!");
         ServletContext cntx= request.getServletContext();
         String filePath = cntx.getRealPath("file/resource/" + resource.getFile_url());
         serveFile(request, response, filePath, ALLOWED_FILE_TYPES);
